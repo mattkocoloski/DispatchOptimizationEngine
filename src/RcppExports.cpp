@@ -134,6 +134,17 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// sumCpp
+double sumCpp(NumericVector x);
+RcppExport SEXP _DispatchOptimizationEngine_sumCpp(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericVector >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(sumCpp(x));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_DispatchOptimizationEngine_fillConstraintMatrixGaps", (DL_FUNC) &_DispatchOptimizationEngine_fillConstraintMatrixGaps, 2},
@@ -145,6 +156,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_DispatchOptimizationEngine_rcpparma_innerproduct", (DL_FUNC) &_DispatchOptimizationEngine_rcpparma_innerproduct, 1},
     {"_DispatchOptimizationEngine_rcpparma_bothproducts", (DL_FUNC) &_DispatchOptimizationEngine_rcpparma_bothproducts, 1},
     {"_DispatchOptimizationEngine_stackCut", (DL_FUNC) &_DispatchOptimizationEngine_stackCut, 7},
+    {"_DispatchOptimizationEngine_sumCpp", (DL_FUNC) &_DispatchOptimizationEngine_sumCpp, 1},
     {NULL, NULL, 0}
 };
 

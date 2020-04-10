@@ -37,3 +37,7 @@ stackCut <- function(PlantParameters, LoadMatrix, OutageMatrix, MustRunMatrix, P
     .Call(`_DispatchOptimizationEngine_stackCut`, PlantParameters, LoadMatrix, OutageMatrix, MustRunMatrix, PowerPrice, HourIndexList, IncludeUnit)
 }
 
+sumCpp <- function(x) {
+    .Call(`_DispatchOptimizationEngine_sumCpp`, x)
+}
+
