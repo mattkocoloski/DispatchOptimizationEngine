@@ -1,0 +1,9 @@
+diff a/R/RcppExports.R b/R/RcppExports.R	(rejected hunks)
+@@ -37,3 +37,7 @@
+     .Call(`_DispatchOptimizationEngine_stackCut`, PlantParameters, LoadMatrix, OutageMatrix, MustRunMatrix, PowerPrice, HourIndexList, IncludeUnit)
+ }
+ 
++sumCpp <- function(x) {
++    .Call(`_DispatchOptimizationEngine_sumCpp`, x)
++}
++
